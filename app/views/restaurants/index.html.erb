@@ -1,0 +1,15 @@
+<div class= "cadrage">
+<h1>All restaurants</h1>
+<p>Welcome in our website, enjoy !</p>
+<% @restaurants.each do |restaurant| %>
+  <h2><%= link_to restaurant.name %></h2>
+  <p><%= link_to restaurant.address %></p>
+  <%= restaurant_path(restaurant) %>
+<% end %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<%= link_to "Add", new_restaurant_path, class: "btn btn-success" %>
+</div>
